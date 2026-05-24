@@ -11,7 +11,7 @@ const formatTime = (d) =>
 export default function WorkLog() {
   const [screen, setScreen] = useState("home"); // home | form | preview
   const [now, setNow] = useState(new Date());
-  const FIXED_TO = "Yasuhiro_Hiorse@amat.com";
+  const FIXED_TO = "Yasuhiro_Hirose@amat.com";
   const [form, setForm] = useState({ work: "", notes: "" });
   const [loggedAt, setLoggedAt] = useState(null);
   const [sent, setSent] = useState(false);
