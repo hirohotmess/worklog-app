@@ -29,10 +29,10 @@ export default function WorkLog() {
 
   const handleSend = () => {
     const subject = encodeURIComponent(
-      `【作業報告】${formatDate(loggedAt)} ${formatTime(loggedAt)}`
+      `【作業ログ】${formatDate(loggedAt)} ${formatTime(loggedAt)}`
     );
     const body = encodeURIComponent(
-      `━━━━━━━━━━━━━━━━━━━━━\n作業報告\n━━━━━━━━━━━━━━━━━━━━━\n\n📅 日時：${formatDate(loggedAt)} ${formatTime(loggedAt)}\n\n📋 作業内容：\n${form.work}\n\n📝 ノート：\n${form.notes || "（なし）"}\n\n━━━━━━━━━━━━━━━━━━━━━\n`
+      `━━━━━━━━━━━━━━━━━━━━━\n作業ログ\n━━━━━━━━━━━━━━━━━━━━━\n\n📅 日時：${formatDate(loggedAt)} ${formatTime(loggedAt)}\n\n📋 作業内容：\n${form.work}\n\n📝 ノート：\n${form.notes || "（なし）"}\n\n━━━━━━━━━━━━━━━━━━━━━\n`
     );
     window.location.href = `mailto:${FIXED_TO}?subject=${subject}&body=${body}`;
     setSent(true);
